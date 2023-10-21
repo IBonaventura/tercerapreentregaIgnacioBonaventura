@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Juego Piedra, Papel, Tijeras</title>
+    <title>Juegos Variados</title>
 </head>
 <body>
-    <h1>Juego Piedra, Papel, Tijeras</h1>
+    <h1>Juegos Variados</h1>
     <div>
+        <button id="piedra">Piedra, Papel, Tijeras</button>
+        <button id="adivinaNumero">Adivina el Número</button>
+    </div>
+    
+    <div id="juegoPiedraPapelTijeras" style="display: none;">
+        <h2>Juego Piedra, Papel, Tijeras</h2>
         <button id="piedra">Piedra</button>
         <button id="papel">Papel</button>
         <button id="tijeras">Tijeras</button>
+        <p>Resultado: <span id="resultado"></span></p>
+        <p>Partidas jugadas: <span id="partidasJugadas">0</span></p>
+        <p>Partidas ganadas: <span id="partidasGanadas">0</span></p>
+        <p>Partidas perdidas: <span id="partidasPerdidas">0</span></p>
     </div>
-    
-    <h2>Resultado:</h2>
-    <p id="resultado"></p>
-    <p>Partidas jugadas: <span id="partidasJugadas">0</span></p>
-    <p>Partidas ganadas: <span id="partidasGanadas">0</span></p>
-    <p>Partidas perdidas: <span id="partidasPerdidas">0</span></p>
-    
-    <script src="juego.js"></script>
+
+    <div id="juegoAdivinaNumero" style="display: none;">
+        <h2>Adivina el Número</h2>
+        <p>Intenta adivinar un número entre 1 y 10.</p>
+        <input type="number" id="numeroUsuario" min="1" max="10">
+        <button id="adivina">Adivina</button>
+        <p id="resultadoAdivina"></p>
+        <p>Intentos restantes: <span id="intentosRestantes"></span></p>
+    </div>
+
+    <script src="juegos.js"></script>
 </body>
 </html>
